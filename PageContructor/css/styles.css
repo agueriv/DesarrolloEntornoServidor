@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Quicksand:wght@300;400;600&family=Young+Serif&display=swap');
+
 * {
   margin: 0;
   padding: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: Quicksand, sans-serif;
+  box-sizing: border-box;
 }
 
 html,
@@ -26,20 +29,155 @@ body {
 }
 
 h1 {
+  font-family: "Young Serif", Quicksand, sans-serif;
   text-align: center;
   margin-bottom: 1rem;
+  font-size: 3rem;
 }
 
 h2 {
+  font-family: "Philosopher", Quicksand, sans-serif;
   text-align: center;
   margin-bottom: 2.5rem;
+  width: 40%;
 }
 
 form {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 form input {
   margin-bottom: 1em;
+}
+
+.container {
+  padding: 2em;
+  border: 2px solid black;
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  background: #1C1D21;
+  margin-bottom: 2rem;
+}
+
+.container code span{
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.containerIn {
+  flex: 1 1 40%;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+form > button {
+  flex: 1 1 100%;
+  border: 2px solid rgba(255, 255, 255, .8);
+  border-radius: 9px;
+  outline: none;
+  background-color: transparent;
+  padding: 20px 0px;
+  color: rgba(255, 255, 255, .8);
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-family: Philosopher;
+  font-weight: 600;
+}
+
+a {
+  border: 2px solid rgba(255, 255, 255, .8);
+  border-radius: 9px;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 18px 50px;
+  color: rgba(255, 255, 255, .8);
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: Philosopher;
+  font-weight: 600;
+}
+
+form > button:hover, a:hover {
+  background-color: rgba(255, 255, 255, .8);
+  color: #34AE7B;
+}
+
+/* Estilos inputs */
+label {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+input[type="file"] {
+  outline: none;
+  padding: 4px;
+  margin: -4px;
+  margin: .2rem;
+  margin-bottom: 2rem;
+}
+
+input[type="file"]:focus-within::file-selector-button,
+input[type="file"]:focus::file-selector-button {
+  outline: 2px solid #0964b0;
+  outline-offset: 2px;
+}
+
+input[type="file"]::before {
+  top: 16px;
+}
+
+input[type="file"]::after {
+  top: 14px;
+}
+
+input[type="file"] {
+  position: relative;
+}
+
+input[type="file"]::file-selector-button {
+  width: 136px;
+  color: transparent;
+}
+
+input[type="file"]::before {
+  position: absolute;
+  pointer-events: none;
+  /*   top: 11px; */
+  left: 40px;
+  color: #0964b0;
+  content: "Upload File";
+}
+
+input[type="file"]::after {
+  position: absolute;
+  pointer-events: none;
+  /*   top: 10px; */
+  left: 16px;
+  height: 20px;
+  width: 20px;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230964B0'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
+}
+
+input[type="file"]::file-selector-button {
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #f3f4f6;
+}
+
+input[type="file"]::file-selector-button:active {
+  background-color: #e5e7eb;
 }
