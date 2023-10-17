@@ -14,7 +14,7 @@
     <form action="upload.php" method="post" enctype="multipart/form-data">
         <label for="headFile">Archivo para el 'head'</label>
         <input type="file" id="headFile" name="headFile">
-        <label for="mainFile">Archivo para el 'main/body'</label>
+        <label for="mainFile">Archivo para el 'main'</label>
         <input type="file" id="mainFile" name="mainFile">
         <label for="headerFile">Archivo para el 'header'</label>
         <input type="file" id="headerFile" name="headerFile">
