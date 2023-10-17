@@ -1,0 +1,3 @@
+<main>
+    <h3>Esta es la prueba del main.txt</h3>
+</main>
