@@ -5,7 +5,7 @@ require('classes/Files.php');
 
 $fm = new FileManager();
 // Borramos posibles archivos anteriores
-$fm->deleteFiles();
+$fm->newPage();
 
 // Añadimos y movemos a la carpeta files los nuevos archivos que ha subido el user
 $headTXT = $fm->send('headFile', 'files/');
