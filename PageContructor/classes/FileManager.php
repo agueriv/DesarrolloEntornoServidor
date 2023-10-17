@@ -6,7 +6,7 @@ class FileManager {
         
     }
     
-    function deleteFiles() {
+    function newPage() {
         unlink('files/index.html');
         unlink('files/footerFile.txt');
         unlink('files/headerFile.txt');
@@ -63,6 +63,6 @@ class FileManager {
         fwrite($finalFile, '</body>');
         fwrite($finalFile, "\n");
         fwrite($finalFile, '</html>');
-        
+        fclose($finalFile);
     }
 }
